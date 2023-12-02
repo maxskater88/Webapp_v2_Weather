@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content = "device-width" initial-scale="1.0">
-    <title>Get Weather Conditions</title>
+    <title>Unable to convert to Integer</title>
     <link href="{{url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
 </head>
 
 <body>
-    <h1>Get Weather Conditions</h1>
-    <form action="/weather"> 
-        <input type = "text" name ="city", id="city" placeholder = "Enter a City"/>
-        <button type="submit">Submit</button>
-    </form>
-    <h2>Double a Number</h2>
+    <h1>Unable to convert to Integer</h1>
+    <h2>Try Again?</h2>
+    <p>{{ doubled_num }} </p>
+
     <form action="/double"> 
         <input type = "text" name ="num_to_double", id="num_to_double" placeholder = "Double a Number"/>
         <button type="submit">Submit</button>

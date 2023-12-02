@@ -34,7 +34,21 @@ def get_weather():
         feels_like = f"{weather_data['main']['feels_like']:.1f}"
     )
 
+@app.route('/double')
+def double_num():
+    in_num = request.args.get('num_to_double')
+    try:
+        in_num = int(in_num)
+        return render_template(
+                "double.html", 
+                doubled_num = in_num * in_num
+            )
+    except:
+        return render_template(
+                "double-not-int.html", 
+            )
+
 
 if __name__ == "__main__":
-    #app.run(host="0.0.0.0", port = 8000)
-    serve(app, host="0.0.0.0", port = 8000)
+    app.run(host="0.0.0.0", port = 8000)
+    #serve(app, host="0.0.0.0", port = 8000)
